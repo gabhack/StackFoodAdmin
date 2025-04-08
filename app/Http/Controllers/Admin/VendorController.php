@@ -336,24 +336,7 @@ class VendorController extends Controller
     }
 
 
-    <?php
-
-    namespace App\Http\Controllers\Admin;
-    
-    use App\Http\Controllers\Controller;
-    use App\Models\Tag;
-    use App\Models\Vendor;
-    use App\Models\Restaurant;
-    use App\Models\Translation;
-    use App\CentralLogics\Helpers;
-    use Illuminate\Support\Str;
-    use Illuminate\Http\Request;
-    use Illuminate\Validation\Rules\Password;
-    use Brian2694\Toastr\Facades\Toastr;
-    use MatanYadaev\EloquentSpatial\Objects\Point;
-    
-    class VendorController extends Controller
-    {
+   
         public function update(Request $request, Restaurant $restaurant)
         {
             // ==========================================================================
@@ -632,7 +615,7 @@ class VendorController extends Controller
             // De lo contrario, volver a la lista habitual
             return redirect('admin/restaurant/list');
         }
-    }
+    
     
 
     public function destroy(Request $request, Restaurant $restaurant)
