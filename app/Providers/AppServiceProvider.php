@@ -38,6 +38,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Request $request)
     {
+        
+
         // URL::forceScheme('https');
         if (($request->is('login/*') || $request->is('provider/auth/login')) && $request->isMethod('post')) {
             $response = $this->actch();
