@@ -97,7 +97,7 @@ class VendorController extends Controller
             'password'   => [
                 'nullable',
                 // Solo un ejemplo si deseas validarla si existe:
-                Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()
+                Password::min(4)->numbers()
             ],
 
             // -- Otros campos
@@ -367,7 +367,7 @@ class VendorController extends Controller
                 // Contraseña: pasa a 'nullable' y sin 'required|unique'
                 'password'  => [
                     'nullable',
-                    Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()
+                    Password::min(4)->numbers()
                 ],
     
                 // Tiempos de entrega, puedes dejarlos como 'nullable' si quieres
